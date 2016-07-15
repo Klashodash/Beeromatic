@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - Beertabase@localhost" uuid="403caf77-8fbe-4f91-a246-6b27eb374b8d">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>beertabase.*</schema-pattern>
+      <default-schemas>beertabase.*</default-schemas>
+    </data-source>
+  </component>
+</project>
