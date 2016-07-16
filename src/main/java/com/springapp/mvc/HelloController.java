@@ -5,31 +5,12 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.*;
 
 @Controller
 @RequestMapping("/")
 public class HelloController
 {
-
-	public void doGet(HttpServletRequest request,
-					  HttpServletResponse response)
-			throws ServletException, IOException
-	{
-
-	}
-
-	public String printWelcome(ModelMap model)
-	{
-
-		model.addAttribute("message", "Hello world!");
-		return "Test";
-	}
 
 	@RequestMapping(method = RequestMethod.GET)
 	public String pickABeer(ModelMap model)
@@ -40,19 +21,23 @@ public class HelloController
 		final String USER = "root";
 		final String PASS = "william1";
 
+		Connection conn = null;
+		Statement statement = null;
+		ResultSet resultSet = null;
+
 		try
 		{
 			Class.forName(JDBCDRIVERNAME);
 
 			// Open a connection
-			Connection conn = DriverManager.getConnection(DB, USER, PASS);
+			conn = DriverManager.getConnection(DB, USER, PASS);
 
-			Statement statement = conn.createStatement();
+			statement = conn.createStatement();
 			String query;
 
 			// Selects a random beer from the database
 			query = "SELECT * FROM beer WHERE RAND()<(SELECT ((1/COUNT(*))*10) FROM beer) ORDER BY RAND() LIMIT 1";
-			ResultSet resultSet = statement.executeQuery(query);
+			resultSet = statement.executeQuery(query);
 
 			// Cycle through resultSet and retrieve the beer data
 			while(resultSet.next())
@@ -68,41 +53,48 @@ public class HelloController
 				model.addAttribute("description", description);
 				model.addAttribute("location", location);
 			}
-
-			// Shut it all down
-			resultSet.close();
-			statement.close();
-			conn.close();
 		}
-		catch(SQLException se)
+		catch(SQLException sqlException)
 		{
-			//Handle errors for JDBC
-			se.printStackTrace();
+			// Deals with any JDBC errors
+			sqlException.printStackTrace();
 		}
 		catch(Exception e)
 		{
-			//Handle errors for Class.forName
+			// Deals with errors relating to the JDBC path name in Class.forName
 			e.printStackTrace();
 		}
-		/*finally
+		finally
 		{
 			//finally block used to close resources
 			try
 			{
-				if(stmt!=null)
-					stmt.close();
-			}catch(SQLException se2){
+				if (resultSet != null)
+					resultSet.close();
+			}
+			catch (SQLException sqlException)
+			{
+				sqlException.printStackTrace();
+			}
+			try
+			{
+				if(statement!=null)
+					statement.close();
+			}
+			catch(SQLException sqlException)
+			{
+				sqlException.printStackTrace();
 			}// nothing we can do
 			try
 			{
 				if(conn!=null)
 					conn.close();
 			}
-			catch(SQLException se)
+			catch(SQLException sqlException)
 			{
-				se.printStackTrace();
-			}//end finally try
-		} //end try*/
+				sqlException.printStackTrace();
+			}
+		}
 
 		return "Test";
 	}
