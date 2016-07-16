@@ -36,6 +36,8 @@ public class BeerController
 			String query;
 
 			// Selects a random beer from the database
+			// According to my notes, this scales better than the standard
+			// SELECT * FROM myTable ORDER BY RAND() LIMIT 1;
 			query = "SELECT * FROM beer WHERE RAND()<(SELECT ((1/COUNT(*))*10) FROM beer) ORDER BY RAND() LIMIT 1";
 			resultSet = statement.executeQuery(query);
 
@@ -46,9 +48,10 @@ public class BeerController
 				String description = resultSet.getString("Description");
 				String location = resultSet.getString("Location");
 				float alccontent = resultSet.getFloat("Alccontent");
+				String image = resultSet.getString("Image");
 
 				model.addAttribute("name", name);
-				model.addAttribute("image", "IMAGE");
+				model.addAttribute("image", image);
 				model.addAttribute("alccontent", alccontent);
 				model.addAttribute("description", description);
 				model.addAttribute("location", location);
@@ -96,6 +99,6 @@ public class BeerController
 			}
 		}
 
-		return "Test";
+		return "BeeromaticPage";
 	}
 }

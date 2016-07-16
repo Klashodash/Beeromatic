@@ -18,7 +18,6 @@
         margin-left: 0;
         margin-right: 0;
         font-weight: bold;
-        align: center;
       }
       table {
 
@@ -54,7 +53,7 @@
 
     <table>
       <tr><td>Beer name: ${name}</td></tr>
-      <tr><td>The beer image goes here ${image}</td></tr>
+      <tr><td><img src="../../webapp/images/${image}"></td></tr>
       <tr><td>Alcohol content: ${alccontent}%</td></tr>
       <tr><td>Description: ${description}</td></tr>
       <tr><td>Brewery address: ${location}</td></tr>
