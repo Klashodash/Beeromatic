@@ -6,11 +6,8 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25a31996-679f-4e4a-b4e2-362bf72c2808" name="Default" comment="Web page formatting stuff">
-      <change type="MODIFICATION" beforePath="C:\Users\bilbo\IdeaProjects\beer\target\beer.war" afterPath="C:\Users\bilbo\IdeaProjects\beer\target\beer.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/BeeromaticPage.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/BeeromaticPage.jsp" />
+    <list default="true" id="25a31996-679f-4e4a-b4e2-362bf72c2808" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/beer/WEB-INF/mvc-dispatcher-servlet.xml" afterPath="$PROJECT_DIR$/target/beer/WEB-INF/mvc-dispatcher-servlet.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/beer/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/target/beer/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -948,7 +945,7 @@
       <option name="number" value="Default" />
       <updated>1468322600355</updated>
       <workItem from="1468322605192" duration="3483000" />
-      <workItem from="1468337148343" duration="57752000" />
+      <workItem from="1468337148343" duration="57761000" />
     </task>
     <task id="LOCAL-00001" summary="Git test">
       <created>1468681104409</created>
@@ -980,11 +977,17 @@
       <option name="project" value="LOCAL" />
       <updated>1468692149404</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Web page formatting stuff">
+      <created>1468701319256</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1468701319256</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61235000" />
+    <option name="totallyTimeSpent" value="61244000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1936" height="1056" extended-state="6" />
