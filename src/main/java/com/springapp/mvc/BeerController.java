@@ -9,7 +9,7 @@ import java.sql.*;
 
 @Controller
 @RequestMapping("/")
-public class HelloController
+public class BeerController
 {
 
 	@RequestMapping(method = RequestMethod.GET)
