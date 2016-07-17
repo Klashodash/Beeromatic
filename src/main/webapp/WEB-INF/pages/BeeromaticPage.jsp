@@ -1,9 +1,9 @@
 <%--
   Created by IntelliJ IDEA.
-  User: bilbo
+  User: William O'Leary
   Date: 12/07/2016
   Time: 15:47
-  To change this template use File | Settings | File Templates.
+
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -18,6 +18,7 @@
       table, th, td {
         border: 1px solid black;
         border-collapse: collapse;
+        height: auto;
       }
       th, td {
         padding: 5px;
@@ -49,8 +50,8 @@
       <table>
         <tr><td>Beer name: ${name}</td></tr>
         <tr><td>
-          <div style="height: 500px; max-width: 80vw">
-            <img src="/images/${image}" style="max-height:100%; max-width: 100%" />
+          <div style="height: 500px; max-width: 80vw" align="center">
+            <img src="/images/${image}" style="max-height:100%; max-width: 100%"  />
           </div>
         </td></tr>
         <tr><td>Alcohol content: ${alccontent}% ABV</td></tr>
