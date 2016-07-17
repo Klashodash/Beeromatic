@@ -77,7 +77,7 @@ public class BeerController
 		}
 		finally
 		{
-			//finally block used to close resources
+			// This block makes sure the resources are closed
 			try
 			{
 				if (resultSet != null)
@@ -95,7 +95,7 @@ public class BeerController
 			catch(SQLException sqlException)
 			{
 				sqlException.printStackTrace();
-			}// nothing we can do
+			}
 			try
 			{
 				if(conn!=null)
