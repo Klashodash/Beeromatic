@@ -2,11 +2,11 @@
 A random beer generator
 
 
-Installation instructions:
+Installation instructions for Intellij:
 __________________________________________________________________________________________________________
 Downloading the files:
 __________________________________________________________________________________________________________
-1. In intellij, click File -> New -> Project from version control -> GitHub
+1. In Intellij, click File -> New -> Project from version control -> GitHub
 2. Paste "https://github.com/Klashodash/Beeromatic" into the Git Repository URL bar, then click clone
 
 
